@@ -16,11 +16,11 @@ public class Combination {
         int y = 0;
         for (int i = 0; i < (list.size() * (list.size() - 1)); i++) {
 
-            if (y != 0 && y % (list.size() - 1) == 0) //ilk elemanı kaç kere yazacak kontrol
-                x++;                                //ilk elemaın değişim sayacı
+            if (y != 0 && y % (list.size() - 1) == 0) //ilk elemanı kaç kere yazacak kontrol: listin eleman sayısının bir eksiği kadar aynı elemanı tekrarlayacak
+                x++;                                //ilk elemaın index değişimi
             arr[i][0] = list.get(x);
 
-            if (y % (list.size() - 1) == 0) {
+            if (y % (list.size() - 1) == 0) {  //   ilk elemandan sonrakileri ayrı bir liste almak için kontrol: birinci elemanı ilk aldığında listeyi alır
                 xlist.clear();
 
                 for (int j = 0; j < list.size(); j++) {
